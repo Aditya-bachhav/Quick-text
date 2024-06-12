@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quick text</h1>
+        <div class="chat-box" id="chat-box">
+            <textarea id="message" placeholder="Write your message..."></textarea>
+            <button id="send-message">Send Message</button>
+        </div>
+        <div class="code-box" id="code-box">
+            <p>Your Unique Code: <span id="unique-code"></span></p>
+            <input type="text" id="code-input" placeholder="Enter code to retrieve message">
+            <button id="get-message">Get Message</button>
+        </div>
+        <div class="display-message" id="display-message">
+            <p id="retrieved-message"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
