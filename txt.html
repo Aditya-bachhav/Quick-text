@@ -8,18 +8,30 @@
 </head>
 <body>
     <div class="container">
-        <h1>Quick text</h1>
-        <div class="chat-box" id="chat-box">
-            <textarea id="message" placeholder="Write your message..."></textarea>
-            <button id="send-message">Send Message</button>
+        <div class="sidebar" id="sidebar">
+            <h2>Previous Messages</h2>
+            <ul id="previous-messages"></ul>
         </div>
-        <div class="code-box" id="code-box">
-            <p>Your Unique Code: <span id="unique-code"></span></p>
-            <input type="text" id="code-input" placeholder="Enter code to retrieve message">
-            <button id="get-message">Get Message</button>
-        </div>
-        <div class="display-message" id="display-message">
-            <p id="retrieved-message"></p>
+        <div class="main-content">
+            <h1>Anonymous Chat</h1>
+            <div class="toggle-buttons">
+                <button id="toggle-sender">Sender</button>
+                <button id="toggle-receiver">Receiver</button>
+            </div>
+            <div class="chat-box sender-box" id="sender-box">
+                <textarea id="message" placeholder="Write your message..."></textarea>
+                <input type="file" id="file-input">
+                <button id="send-message">Send Message</button>
+                <p>Your Unique Code: <span id="unique-code"></span></p>
+            </div>
+            <div class="chat-box receiver-box" id="receiver-box">
+                <input type="text" id="code-input" placeholder="Enter code to retrieve message">
+                <button id="get-message">Get Message</button>
+                <div class="display-message" id="display-message">
+                    <p id="retrieved-message"></p>
+                    <a id="download-link" href="#" style="display: none;" download>Download Attachment</a>
+                </div>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>

@@ -1,21 +1,75 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
 }
 
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.sidebar {
+    background: #333;
+    color: white;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
 
 h1 {
     margin-bottom: 20px;
 }
 
-.chat-box,
-.code-box {
+.toggle-buttons {
     margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+.toggle-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.chat-box {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.sender-box,
+.receiver-box {
+    display: none;
 }
 
 #message {
@@ -25,6 +79,10 @@ h1 {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+#file-input {
+    margin-bottom: 10px;
 }
 
 button {
